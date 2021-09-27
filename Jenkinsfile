@@ -12,11 +12,13 @@ pipeline{
 
     stage("Compilar y empaquetar el proyecto"){
       steps{
-        if(isUnix()){
-          sh "mvn clean package"
+        script{
+          if(isUnix()){
+            sh "mvn clean package"
 
-        }else{
-          bat "mvn clean package"
+          }else{
+            bat "mvn clean package"
+          }
         }
 
       }

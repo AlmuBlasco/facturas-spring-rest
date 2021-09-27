@@ -1,0 +1,10 @@
+FROM maven:3.8.2-amazoncorrecto-8
+
+WORKDIR /app
+
+COPY . .
+#Con estos dos puntos indicamos que queremos que copie todo para poder usarlo denro de la app
+
+RUN mvn clean package
+
+ENTRYPOINT ["java", "-jar", "target/facturas-rest-1.0.0.jar"]

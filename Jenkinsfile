@@ -5,7 +5,7 @@ agent any
 stages{
   stage("Descargar código de la aplicación"){
     steps{
-      git "https://github.com/AlmuBlasco/NOMBRE-REPOSITORIO"
+      git "https://github.com/AlmuBlasco/facturas-spring-rest.git"
 
     }
   }

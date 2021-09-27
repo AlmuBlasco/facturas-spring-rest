@@ -20,7 +20,6 @@ pipeline{
             bat "mvn clean package"
           }
         }
-
       }
     }
 
@@ -32,12 +31,11 @@ pipeline{
 
           }else{
               bat "docker build -t ablasco/app-java ."
-            }
           }
         }
       }
-
     }
+
 
     stage("Ejecución de contenedor"){
       steps{
@@ -74,6 +72,7 @@ pipeline{
         }
       }
     }
+  }
 }
 
 
